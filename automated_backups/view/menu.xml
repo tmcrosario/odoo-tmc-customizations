@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <menuitem parent="base.next_id_9"
+              action="action_backup_conf_form"
+              id="backup_conf_menu" />
+
+</odoo>

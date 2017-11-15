@@ -1,0 +1,136 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* automated_backups
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-15 11:55+0000\n"
+"PO-Revision-Date: 2017-11-15 09:09-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.0.4\n"
+
+#. module: automated_backups
+#: model:ir.actions.act_window,name:automated_backups.action_backup_conf_form
+#: model:ir.ui.menu,name:automated_backups.backup_conf_menu
+msgid "Automated Backups"
+msgstr "Backups Automáticos"
+
+#. module: automated_backups
+#: model:ir.ui.view,arch_db:automated_backups.view_backup_conf_tree
+msgid "Backups"
+msgstr "Backups"
+
+#. module: automated_backups
+#: sql_constraint:db.backup:0
+msgid "Cannot duplicate a configuration"
+msgstr "No puede duplicarse una configuración"
+
+#. module: automated_backups
+#: sql_constraint:db.backup:0
+msgid "Cannot remove backups from recurrence future"
+msgstr "Cannot remove backups from recurrence future"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: automated_backups
+#: selection:db.backup,recurrence:0
+msgid "Daily"
+msgstr "Diario"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup_days_to_keep
+msgid "Days to keep"
+msgstr "Días a Retener"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: automated_backups
+#: code:addons/automated_backups/models/db_backup.py:65
+#, python-format
+msgid "Do not save backups on your filestore, or you will backup your backups too!"
+msgstr "No guardar backups en el filestore o se respaldarán los backups también!"
+
+#. module: automated_backups
+#: model:ir.actions.server,name:automated_backups.action_server_backup
+msgid "Execute backup(s)"
+msgstr "Ejecutar backup(s)"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup_folder
+msgid "Folder"
+msgstr "Directorio"
+
+#. module: automated_backups
+#: selection:db.backup,recurrence:0
+msgid "Hourly"
+msgstr "Por Hora"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup_id
+msgid "ID"
+msgstr "ID"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización realizada por"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: automated_backups
+#: selection:db.backup,recurrence:0
+msgid "Monthly"
+msgstr "Mensual"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup_recurrence
+msgid "Recurrence"
+msgstr "Recurrencia"
+
+#. module: automated_backups
+#: model:ir.ui.view,arch_db:automated_backups.view_backup_conf_search
+msgid "Search options"
+msgstr "Search options"
+
+#. module: automated_backups
+#: code:addons/automated_backups/models/db_backup.py:110
+#, python-format
+msgid "Wrong backup interval"
+msgstr "Intervalo de backups inválidos"
+
+#. module: automated_backups
+#: model:ir.model,name:automated_backups.model_db_backup
+msgid "db.backup"
+msgstr "db.backup"
