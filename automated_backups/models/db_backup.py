@@ -135,7 +135,7 @@ class DB_Backup(models.Model):
         for rec in self.filtered('days_to_keep'):
             with rec.cleanup_log():
                 oldest = self.filename(now - timedelta(days=rec.days_to_keep))
-                for name in iglob(os.path.join(rec.folder, '*.dump.zip')):
+                for name in iglob(os.path.join(rec.folder, '*.zip')):
                     if os.path.basename(name) < oldest:
                         os.unlink(name)
 
