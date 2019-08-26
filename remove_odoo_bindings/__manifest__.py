@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 # Based on 'disable_odoo_online' module by Therp BV
 # Copyright (C) 2013 Therp BV (<http://therp.nl>).
