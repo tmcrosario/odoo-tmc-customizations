@@ -9,7 +9,7 @@
     "license": "AGPL-3",
     "category": "base",
     "data": [
-        'views/ir_ui_menu.xml'
+        'data/ir_ui_menu.xml'
     ],
     "qweb": [
         'static/src/xml/base.xml',
