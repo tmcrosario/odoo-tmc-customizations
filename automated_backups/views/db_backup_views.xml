@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="db_backup_view_form"
+            model="ir.ui.view">
+        <field name="name">Automated Backups</field>
+        <field name="model">db.backup</field>
+        <field name="type">form</field>
+        <field name="arch"
+               type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="folder" />
+                        <field name="days_to_keep" />
+                        <field name="recurrence" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="db_backup_view_tree"
+            model="ir.ui.view">
+        <field name="name">Automated Backups</field>
+        <field name="model">db.backup</field>
+        <field name="type">tree</field>
+        <field name="arch"
+               type="xml">
+            <tree string="Backups">
+                <field name='name' />
+                <field name='folder' />
+                <field name='recurrence' />
+            </tree>
+        </field>
+    </record>
+
+    <record id="db_backup_view_search"
+            model="ir.ui.view">
+        <field name="name">Automated Backups</field>
+        <field name="model">db.backup</field>
+        <field name="type">search</field>
+        <field name="arch"
+               type="xml">
+            <search string="Search options">
+                <field name='name' />
+                <field name='folder' />
+            </search>
+        </field>
+    </record>
+
+    <act_window name="Automated Backups"
+                id="db_backup_action_form"
+                res_model="db.backup" />
+
+    <record id="db_backup_server_action"
+            model="ir.actions.server">
+        <field name="name">Execute backup(s)</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_db_backup" />
+        <field name="binding_model_id" ref="model_db_backup" />
+        <field name="state">code</field>
+        <field name="code">records.action_backup()</field>
+    </record>
+
+</odoo>
