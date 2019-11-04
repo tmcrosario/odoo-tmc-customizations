@@ -7,10 +7,12 @@
     'license': 'AGPL-3',
     'sequence': 10,
     'summary': 'Projects, Tasks',
-    'depends': ['project', 'project_task_code'],
+    'depends': [
+        'project',
+        'project_task_code'],
     'data': [
         'views/project_views.xml',
     ],
     'installable': True,
     'auto_install': False,
-}  # yasf: disable
+}  # yapf: disable

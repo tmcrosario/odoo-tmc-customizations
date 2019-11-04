@@ -13,4 +13,4 @@
     ],
     'installable': True,
     'auto_install': False,
-}  # yasf: disable
+}  # yapf: disable
