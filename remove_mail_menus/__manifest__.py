@@ -4,6 +4,7 @@
     "author": "TMC Rosario",
     "license": "AGPL-3",
     "category": "base",
+    "depends": ['mail'],
     "data": [
         'data/mail_channel_views.xml'
     ],
