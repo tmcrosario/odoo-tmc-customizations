@@ -30,9 +30,13 @@ class DbBackup(models.Model):
     _intervals_ = [('hourly', 'Hourly'), ('daily', 'Daily'),
                    ('monthly', 'Monthly')]
 
+    def _default_folder(self):
+        return os.path.join(tools.config["data_dir"], "backups",
+                            self.env.cr.dbname)
+
     name = fields.Char(required=True)
 
-    folder = fields.Char()
+    folder = fields.Char(default=_default_folder, required=True)
 
     days_to_keep = fields.Integer(
         default=0,
