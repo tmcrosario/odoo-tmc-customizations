@@ -75,7 +75,7 @@ class DbBackup(models.Model):
                 with open(os.path.join(rec.folder, filename), 'wb') as destiny:
                     # Copy the cached backup
                     if backup:
-                        with open(backup) as cached:
+                        with open(backup, 'rb') as cached:
                             shutil.copyfileobj(cached, destiny)
                     # Generate new backup
                     else:
@@ -88,6 +88,8 @@ class DbBackup(models.Model):
 
         # Remove old files for successful backups
         successful.cleanup_old_backups()
+
+        return True
 
     def action_backup_all(self, interval=None):
         if interval == 'days':
