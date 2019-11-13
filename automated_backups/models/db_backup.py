@@ -136,5 +136,6 @@ class DbBackup(models.Model):
 
     @api.model
     def filename(self, when):
-        return "{:%Y_%m_%d_%H_%M_%S}_%s_%s.zip".format(when) % (
-            self.env.cr.dbname, self.recurrence)
+        for database in self:
+            return "{:%Y_%m_%d_%H_%M_%S}_%s_%s.zip".format(when) % (
+                database.env.cr.dbname, database.recurrence)
