@@ -8,7 +8,7 @@
     "name": "Automated Database Backups",
     "version": "13.0.1.0.0",
     "author": "Yenthe Van Ginneken, Agile BG, ESOC, LasLabs, OCA, TMC Rosario",
-    'license': "AGPL-3",
+    "license": "AGPL-3",
     "website": "http://www.vanroey.be/applications/bedrijfsbeheer/odoo",
     "category": "Tools",
     "depends": [],
