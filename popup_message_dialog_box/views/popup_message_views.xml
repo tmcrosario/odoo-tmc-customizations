@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- FORM VIEW -->
+    <record id="popup_message_view_form"
+            model="ir.ui.view">
+        <field name="name">popup.message.view.form</field>
+        <field name="model">popup.message</field>
+        <field name="arch"
+               type="xml">
+            <form>
+                <field name="name"/>
+                <footer>
+                    <button string="Ok" class="btn-primary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

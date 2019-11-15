@@ -11,6 +11,7 @@ addon | version | summary
 [remove_mail_menus](remove_mail_menus/) | 13.0.1.0.0 | Hide Activities, Conversation and Discuss menus from 'mail' addon
 [remove_odoo_bindings](remove_odoo_bindings/) | 13.0.1.0.0 | Deactivates all bindings to odoo.com that come with the standard code
 [automated_backups](automated_backups/) | 13.0.1.0.0 | Simplified version of 'auto_backup' addon
+[popup_message_dialog_box](popup_message_dialog_box/) | 13.0.1.0.0 | Popup message dialog box addon
 
 ## License
 
