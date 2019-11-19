@@ -9,7 +9,9 @@
         <field name="arch"
                type="xml">
             <form>
-                <field name="name"/>
+                <field name="is_html" invisible="True"/>
+                <field name="plain_text_message" attrs="{'invisible':[('is_html','=', True)]}" />
+                <field name="html_message" attrs="{'invisible':[('is_html','=', False)]}" />
                 <footer>
                     <button string="Ok" class="btn-primary" special="cancel" />
                 </footer>
