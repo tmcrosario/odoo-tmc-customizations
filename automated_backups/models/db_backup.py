@@ -20,6 +20,7 @@ _LOGGER = logging.getLogger(__name__)
 class DbBackup(models.Model):
 
     _name = 'db.backup'
+    _description = 'Database Backup'
 
     _sql_constraints = [
         ('name_unique', 'UNIQUE(name)', 'Cannot duplicate a configuration'),

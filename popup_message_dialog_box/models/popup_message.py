@@ -2,7 +2,9 @@ from odoo import fields, models
 
 
 class PopupMessage(models.TransientModel):
+
     _name = 'popup.message'
+    _description = 'Popup Message'
 
     def _default_message(self):
         if self.env.context.get('message', False):
