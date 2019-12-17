@@ -1,0 +1,163 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* automated_backups
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-16 18:03+0000\n"
+"PO-Revision-Date: 2019-12-16 15:09-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.2.4\n"
+
+#. module: automated_backups
+#: model:ir.actions.act_window,name:automated_backups.db_backup_action_form
+#: model:ir.ui.menu,name:automated_backups.menu_db_backup_configuration
+msgid "Automated Backups"
+msgstr "Backups Automáticos"
+
+#. module: automated_backups
+#: code:addons/automated_backups/models/db_backup.py:0
+#, python-format
+msgid "Backup directory must be set!"
+msgstr "El directorio de backup debe estar establecido!"
+
+#. module: automated_backups
+#: model_terms:ir.ui.view,arch_db:automated_backups.db_backup_view_tree
+msgid "Backups"
+msgstr "Backups"
+
+#. module: automated_backups
+#: model:ir.model.constraint,message:automated_backups.constraint_db_backup_name_unique
+msgid "Cannot duplicate a configuration"
+msgstr "No se puede duplicar la configuración"
+
+#. module: automated_backups
+#: model:ir.model.constraint,message:automated_backups.constraint_db_backup_days_to_keep_positive
+msgid "Cannot remove backups from recurrence future"
+msgstr "No se pueden borrar backups de recurrencia futura"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: automated_backups
+#: model:ir.model.fields.selection,name:automated_backups.selection__db_backup__recurrence__daily
+msgid "Daily"
+msgstr "Diario"
+
+#. module: automated_backups
+#: model:ir.actions.server,name:automated_backups.ir_cron_backup_scheduler_daily_ir_actions_server
+#: model:ir.cron,cron_name:automated_backups.ir_cron_backup_scheduler_daily
+#: model:ir.cron,name:automated_backups.ir_cron_backup_scheduler_daily
+msgid "Daily Backup"
+msgstr "Backup Diario"
+
+#. module: automated_backups
+#: model:ir.model,name:automated_backups.model_db_backup
+msgid "Database Backup"
+msgstr "Backup de Base de Datos"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup__days_to_keep
+msgid "Days To Keep"
+msgstr "Días a Conservar"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup__display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: automated_backups
+#: code:addons/automated_backups/models/db_backup.py:0
+#, python-format
+msgid "Do not save backups on your filestore, or you will backup your backups too!"
+msgstr "No guardar backups en filestore o se copiaran los backups inclusive!"
+
+#. module: automated_backups
+#: model:ir.actions.server,name:automated_backups.db_backup_server_action
+msgid "Execute backup(s)"
+msgstr "Ejecutar Backup(s)"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup__folder
+msgid "Folder"
+msgstr "Directorio"
+
+#. module: automated_backups
+#: model:ir.model.fields.selection,name:automated_backups.selection__db_backup__recurrence__hourly
+msgid "Hourly"
+msgstr "Por Hora"
+
+#. module: automated_backups
+#: model:ir.actions.server,name:automated_backups.ir_cron_backup_scheduler_hourly_ir_actions_server
+#: model:ir.cron,cron_name:automated_backups.ir_cron_backup_scheduler_hourly
+#: model:ir.cron,name:automated_backups.ir_cron_backup_scheduler_hourly
+msgid "Hourly Backup"
+msgstr "Backup por Hora"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup__id
+msgid "ID"
+msgstr ""
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup____last_update
+msgid "Last Modified on"
+msgstr "Última Modificación en"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup__write_uid
+msgid "Last Updated by"
+msgstr "Última Actualización por"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup__write_date
+msgid "Last Updated on"
+msgstr "Última Actualización en"
+
+#. module: automated_backups
+#: model:ir.model.fields.selection,name:automated_backups.selection__db_backup__recurrence__monthly
+msgid "Monthly"
+msgstr "Mensual"
+
+#. module: automated_backups
+#: model:ir.actions.server,name:automated_backups.ir_cron_backup_scheduler_monthly_ir_actions_server
+#: model:ir.cron,cron_name:automated_backups.ir_cron_backup_scheduler_monthly
+#: model:ir.cron,name:automated_backups.ir_cron_backup_scheduler_monthly
+msgid "Monthly Backup"
+msgstr "Backup Mensual"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: automated_backups
+#: model:ir.model.fields,field_description:automated_backups.field_db_backup__recurrence
+msgid "Recurrence"
+msgstr "Recurrencia"
+
+#. module: automated_backups
+#: model_terms:ir.ui.view,arch_db:automated_backups.db_backup_view_search
+msgid "Search options"
+msgstr "Opciones de Búsqueda"
+
+#. module: automated_backups
+#: code:addons/automated_backups/models/db_backup.py:0
+#, python-format
+msgid "Wrong backup interval"
+msgstr "Intervalo de backup incorrecto"
