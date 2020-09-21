@@ -1,6 +1,6 @@
 # Odoo TMC Customizations
 
-Odoo extras modules for use alongside with TMC modules.
+ Extra modules for use alongside with TMC addons.
 
 ## Available addons
 
@@ -23,4 +23,4 @@ You should have received a copy of the GNU Affero General Public License along w
 
 ----
 
-<img src="https://www.tmcrosario.gob.ar/images/tmc_nuevo.png"/>
+<img align="left" src="https://iili.io/2ARo1R.png"/>
