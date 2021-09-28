@@ -21,7 +21,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:automated_backups.db_backup_action_form
 #: model:ir.ui.menu,name:automated_backups.menu_db_backup_configuration
 msgid "Automated Backups"
-msgstr "Backups Automáticos"
+msgstr "Backups automáticos"
 
 #. module: automated_backups
 #: code:addons/automated_backups/models/db_backup.py:0
