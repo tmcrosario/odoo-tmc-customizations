@@ -3,17 +3,22 @@
 
     <!-- FORM VIEW -->
     <record id="popup_message_view_form"
-            model="ir.ui.view">
+        model="ir.ui.view">
         <field name="name">popup.message.view.form</field>
         <field name="model">popup.message</field>
         <field name="arch"
-               type="xml">
+            type="xml">
             <form>
-                <field name="is_html" invisible="True"/>
-                <field name="plain_text_message" attrs="{'invisible':[('is_html','=', True)]}" />
-                <field name="html_message" attrs="{'invisible':[('is_html','=', False)]}" />
+                <field name="is_html"
+                    invisible="True" />
+                <field name="plain_text_message"
+                    attrs="{'invisible':[('is_html','=', True)]}" />
+                <field name="html_message"
+                    attrs="{'invisible':[('is_html','=', False)]}" />
                 <footer>
-                    <button string="Ok" class="btn-primary" special="cancel" />
+                    <button string="Ok"
+                        class="btn-primary"
+                        special="cancel" />
                 </footer>
             </form>
         </field>
