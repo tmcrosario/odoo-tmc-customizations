@@ -6,7 +6,7 @@
 
 {
     "name": "Automated Database Backups",
-    "version": "13.0.1.0.0",
+    "version": "14.0.1.0.0",
     "author": "Yenthe Van Ginneken, Agile BG, ESOC, LasLabs, OCA, TMC Rosario",
     "license": "AGPL-3",
     "website": "http://www.vanroey.be/applications/bedrijfsbeheer/odoo",
@@ -16,8 +16,8 @@
         "data/db_backup_data.xml",
         "data/ir_cron_data.xml",
         "views/db_backup_views.xml",
-        "views/automated_backups_menus.xml"
+        "views/automated_backups_menus.xml",
     ],
     "application": True,
-    "installable": True
+    "installable": True,
 }  # yapf: disable

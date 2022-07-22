@@ -50,9 +50,11 @@
         </field>
     </record>
 
-    <act_window name="Automated Backups"
-                id="db_backup_action_form"
-                res_model="db.backup" />
+    <record id="db_backup_action_form"
+        model="ir.actions.act_window">
+        <field name="name">Automated Backups</field>
+        <field name="res_model">db.backup</field>
+    </record>
 
     <record id="db_backup_server_action"
             model="ir.actions.server">
