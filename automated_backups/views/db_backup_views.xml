@@ -25,14 +25,14 @@
             model="ir.ui.view">
         <field name="name">Automated Backups</field>
         <field name="model">db.backup</field>
-        <field name="type">tree</field>
+        <field name="type">list</field>
         <field name="arch"
                type="xml">
-            <tree string="Backups">
+            <list string="Backups">
                 <field name='name' />
                 <field name='folder' />
                 <field name='recurrence' />
-            </tree>
+            </list>
         </field>
     </record>
 

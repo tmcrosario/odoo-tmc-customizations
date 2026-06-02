@@ -12,9 +12,9 @@
                 <field name="is_html"
                     invisible="True" />
                 <field name="plain_text_message"
-                    attrs="{'invisible':[('is_html','=', True)]}" />
+                    invisible="is_html" />
                 <field name="html_message"
-                    attrs="{'invisible':[('is_html','=', False)]}" />
+                    invisible="not is_html" />
                 <footer>
                     <button string="Ok"
                         class="btn-primary"
