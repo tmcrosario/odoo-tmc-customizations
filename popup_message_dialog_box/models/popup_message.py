@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class PopupMessage(models.TransientModel):
-
     _name = "popup.message"
     _description = "Popup Message"
 
