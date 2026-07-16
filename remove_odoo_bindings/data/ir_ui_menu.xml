@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <!-- Menus moved under Tools\Parameters -->
-    <record model="ir.ui.menu" id="base.menu_module_updates">
-        <field name="parent_id" ref="base.menu_ir_property" />
-    </record>
-
-    <record model="ir.ui.menu" id="base.module_mi">
-        <field name="parent_id" ref="base.menu_ir_property" />
-    </record>
+    <!-- 19.0: `base.menu_module_updates` and `base.module_mi` no longer exist
+         (the Apps menu was restructured), so the old reparenting under
+         Settings > Technical > Parameters was removed so the module installs.
+         Re-hiding the odoo.com / Apps menus for 19.0 should be handled together
+         with the OWL rewrite of static/src/xml/base.xml (see the remove_odoo_bindings
+         entry in the migration follow-up / task #6). -->
 </odoo>

@@ -21,14 +21,10 @@ class DbBackup(models.Model):
     _name = "db.backup"
     _description = "Database Backup"
 
-    _sql_constraints = [
-        ("name_unique", "UNIQUE(name)", "Cannot duplicate a configuration"),
-        (
-            "days_to_keep_positive",
-            "CHECK(days_to_keep >= 0)",
-            "Cannot remove backups from recurrence future",
-        ),
-    ]
+    _name_unique = models.Constraint("UNIQUE(name)", "Cannot duplicate a configuration")
+    _days_to_keep_positive = models.Constraint(
+        "CHECK(days_to_keep >= 0)", "Cannot remove backups from recurrence future"
+    )
 
     _intervals_ = [("hourly", "Hourly"), ("daily", "Daily"), ("monthly", "Monthly")]
 
