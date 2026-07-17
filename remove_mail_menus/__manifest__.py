@@ -9,6 +9,7 @@
     "assets": {
         "web.assets_backend": [
             "remove_mail_menus/static/src/js/remove_mail_menus.js",
+            "remove_mail_menus/static/src/scss/remove_mail_menus.scss",
         ],
     },
     "installable": True,

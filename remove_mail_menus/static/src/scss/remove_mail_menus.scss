@@ -1,0 +1,17 @@
+// mail draws a presence badge on top of the user avatar by extending the
+// web.UserMenu and web.BurgerMenu templates (see mail's user_menu_patch.xml /
+// burger_menu_patch.xml), which wrap the avatar in a div and add an <ImStatus>
+// component. Both patches tag it with the same class, so one rule covers the
+// desktop user menu and the mobile burger menu.
+//
+// It is a template extension rather than a registry entry, so it cannot be
+// dropped the way the systray items are. Hiding it is deliberate: removing the
+// node would mean re-inheriting web.UserMenu with an xpath, and if a future
+// version changes that structure the xpath would stop matching and break the
+// whole backend bundle. This just stops applying instead.
+// `!important` is required, not sloppiness: the component's root div also carries
+// Bootstrap's `d-flex` utility, which is itself `display: flex !important`, and
+// only `!important` can override `!important` -- no amount of specificity would.
+.o-web-UserMenu-imStatus {
+    display: none !important;
+}
