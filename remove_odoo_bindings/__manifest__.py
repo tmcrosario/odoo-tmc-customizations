@@ -8,11 +8,11 @@
     "author": "Therp BV, GRAP, Odoo Community Association (OCA), TMC Rosario",
     "license": "AGPL-3",
     "category": "base",
-    "depends": ["base"],
+    "depends": ["web"],
     "data": ["data/ir_ui_menu.xml"],
     "assets": {
         "web.assets_backend": [
-            "remove_odoo_bindings/static/src/xml/base.xml",
+            "remove_odoo_bindings/static/src/js/user_menu.js",
         ],
     },
     "installable": True,
