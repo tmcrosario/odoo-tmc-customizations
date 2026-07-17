@@ -8,7 +8,7 @@
     "data": ["data/mail_channel_views.xml"],
     "assets": {
         "web.assets_backend": [
-            "remove_mail_menus/static/src/js/systray.js",
+            "remove_mail_menus/static/src/js/remove_mail_menus.js",
         ],
     },
     "installable": True,
