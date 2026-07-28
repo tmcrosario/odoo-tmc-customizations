@@ -72,19 +72,28 @@ class DbBackup(models.Model):
                 except OSError as err:
                     _LOGGER.exception("%s", err)
 
-                with open(os.path.join(rec.folder, filename), "wb") as destiny:
-                    # Copy the cached backup
-                    if backup:
-                        with open(backup, "rb") as cached:
-                            shutil.copyfileobj(cached, destiny)
-                    # Generate new backup
-                    else:
-                        try:
-                            db.dump_db(self.env.cr.dbname, destiny)
-                            backup = backup or destiny.name
-                        except OSError as err:
-                            _LOGGER.exception("%s", err)
-                successful |= rec
+                destination = os.path.join(rec.folder, filename)
+                # Reopening the same path "wb" would truncate the fresh dump
+                if not backup or os.path.abspath(backup) != os.path.abspath(
+                    destination
+                ):
+                    with open(destination, "wb") as destiny:
+                        # Copy the cached backup
+                        if backup:
+                            with open(backup, "rb") as cached:
+                                shutil.copyfileobj(cached, destiny)
+                        # Generate new backup
+                        else:
+                            try:
+                                db.dump_db(self.env.cr.dbname, destiny)
+                                backup = backup or destiny.name
+                            except OSError as err:
+                                _LOGGER.exception("%s", err)
+                # An empty dump must not trigger cleanup of good older backups
+                if os.path.isfile(destination) and os.path.getsize(destination):
+                    successful |= rec
+                else:
+                    _LOGGER.error("Empty database backup: %s", rec.name)
 
         # Remove old files for successful backups
         successful.cleanup_old_backups()
