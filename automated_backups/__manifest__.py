@@ -13,6 +13,7 @@
     "category": "Tools",
     "depends": ["base"],
     "data": [
+        "security/ir.model.access.csv",
         "data/db_backup_data.xml",
         "data/ir_cron_data.xml",
         "views/db_backup_views.xml",
