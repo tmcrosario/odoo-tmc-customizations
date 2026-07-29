@@ -3,9 +3,9 @@ import shutil
 import tempfile
 from unittest.mock import patch
 
-from odoo.addons.automated_backups.models import db_backup
-
 from odoo.tests import common
+
+from odoo.addons.automated_backups.models import db_backup
 
 
 class TestDbBackup(common.TransactionCase):
@@ -84,6 +84,29 @@ class TestDbBackup(common.TransactionCase):
         dumps = self.dumps()
         self.assertEqual(len(dumps), 1)
         self.assertTrue(os.path.getsize(dumps[0]), "the twin truncated the dump")
+
+    def test_hourly_cleanup_keeps_other_recurrences(self):
+        # Shared folder: the hourly cleanup (keep 1 day) must not delete the
+        # daily/monthly dumps, which carry their own longer retention
+        dbname = self.env.cr.dbname
+        old_daily = os.path.join(
+            self.folder, "2000_01_01_00_00_00_%s_daily.zip" % dbname
+        )
+        old_monthly = os.path.join(
+            self.folder, "2000_01_01_00_00_00_%s_monthly.zip" % dbname
+        )
+        for path in (old_daily, old_monthly):
+            with open(path, "wb") as handle:
+                handle.write(b"old but good")
+
+        self.db_hourly.cleanup_old_backups()
+
+        self.assertTrue(
+            os.path.exists(old_daily), "hourly cleanup deleted the daily dump"
+        )
+        self.assertTrue(
+            os.path.exists(old_monthly), "hourly cleanup deleted the monthly dump"
+        )
 
     def test_failed_dump_does_not_trigger_cleanup(self):
         # A dump that writes nothing must not count as success, or cleanup runs

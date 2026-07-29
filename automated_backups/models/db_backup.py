@@ -124,8 +124,11 @@ class DbBackup(models.Model):
         now = datetime.now()
         for rec in self.filtered("days_to_keep"):
             with rec.cleanup_log():
-                oldest = self.filename(now - timedelta(days=rec.days_to_keep))
-                for name in iglob(os.path.join(rec.folder, "*.zip")):
+                # Prune only this recurrence; a shared folder keeps the
+                # other recurrences' longer-lived dumps
+                oldest = rec.filename(now - timedelta(days=rec.days_to_keep))
+                pattern = os.path.join(rec.folder, "*_%s.zip" % rec.recurrence)
+                for name in iglob(pattern):
                     if os.path.basename(name) < oldest:
                         os.unlink(name)
 
