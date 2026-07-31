@@ -5,7 +5,7 @@
     "license": "AGPL-3",
     "category": "base",
     "depends": ["mail"],
-    "data": ["data/mail_channel_views.xml"],
+    "data": ["data/ir_ui_menu.xml"],
     "assets": {
         "web.assets_backend": [
             "remove_mail_menus/static/src/js/remove_mail_menus.js",

@@ -11,8 +11,7 @@ class PopupMessage(models.TransientModel):
         return False
 
     def _default_is_html(self):
-        self.env.context.get("is_html", False)
-        return self.env.context.get("is_html")
+        return self.env.context.get("is_html", False)
 
     plain_text_message = fields.Text(
         string="Message", readonly=True, default=_default_message
