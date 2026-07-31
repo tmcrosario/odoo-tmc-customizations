@@ -2,14 +2,13 @@
 # 2015 Agile Business Group <http://www.agilebg.com>
 # 2016 Grupo ESOC Ingenieria de Servicios, S.L.U. - Jairo Llopis
 # 2017 Tribunal Municipal de Cuentas de Rosario - Lisandro Gallo
-# License GPL-3.0 or later (http://www.gnu.org/licenses/gpl.html).
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/gpl.html).
 
 {
     "name": "Automated Database Backups",
     "version": "19.0.1.0.0",
     "author": "Yenthe Van Ginneken, Agile BG, ESOC, LasLabs, OCA, TMC Rosario",
     "license": "AGPL-3",
-    "website": "http://www.vanroey.be/applications/bedrijfsbeheer/odoo",
     "category": "Tools",
     "depends": ["base"],
     "data": [

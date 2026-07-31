@@ -23,7 +23,7 @@ class DbBackup(models.Model):
 
     _name_unique = models.Constraint("UNIQUE(name)", "Cannot duplicate a configuration")
     _days_to_keep_positive = models.Constraint(
-        "CHECK(days_to_keep >= 0)", "Cannot remove backups from recurrence future"
+        "CHECK(days_to_keep >= 0)", "Days to keep cannot be negative."
     )
 
     _intervals_ = [("hourly", "Hourly"), ("daily", "Daily"), ("monthly", "Monthly")]
@@ -38,6 +38,7 @@ class DbBackup(models.Model):
     days_to_keep = fields.Integer(
         default=0,
         required=True,
+        help="Days to keep each backup. Set 0 to keep backups forever.",
     )
 
     recurrence = fields.Selection(selection=_intervals_, required=True)
@@ -55,7 +56,7 @@ class DbBackup(models.Model):
 
     def action_backup(self):
         backup = None
-        filename = self.filename(datetime.now())
+        now = datetime.now()
         successful = self.browse()
 
         for rec in self:
@@ -64,14 +65,10 @@ class DbBackup(models.Model):
                 try:
                     if not os.path.isdir(rec.folder):
                         os.makedirs(rec.folder)
-                except ValueError as err:
-                    _LOGGER.exception("%s", err)
-                    raise exceptions.ValidationError(
-                        _("Backup directory must be set!")
-                    ) from err
                 except OSError as err:
                     _LOGGER.exception("%s", err)
 
+                filename = rec.filename(now)
                 destination = os.path.join(rec.folder, filename)
                 # Reopening the same path "wb" would truncate the fresh dump
                 if not backup or os.path.abspath(backup) != os.path.abspath(
@@ -141,7 +138,7 @@ class DbBackup(models.Model):
             )
             yield
         except OSError:
-            _LOGGER.exception("Cleanup of old database backups failed: %s")
+            _LOGGER.exception("Cleanup of old database backups failed: %s", self.name)
         else:
             _LOGGER.info("Cleanup of old database backups succeeded: %s", self.name)
 
