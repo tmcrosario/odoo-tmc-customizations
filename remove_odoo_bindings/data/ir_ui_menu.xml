@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <!-- 19.0: `base.menu_module_updates` and `base.module_mi` no longer exist
-         (the Apps menu was restructured), so the old reparenting under
-         Settings > Technical > Parameters was removed so the module installs.
-         Re-hiding the odoo.com / Apps menus for 19.0 is still TODO. -->
+    <!-- Hide the odoo.com store menus; local module management stays available -->
+    <record id="base.menu_theme_store" model="ir.ui.menu">
+        <field name="active" eval="False" />
+    </record>
+    <record id="base.menu_third_party" model="ir.ui.menu">
+        <field name="active" eval="False" />
+    </record>
 </odoo>

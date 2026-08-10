@@ -4,12 +4,12 @@
 
 {
     "name": "Remove odoo.com Bindings",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.1.0",
     "author": "Therp BV, GRAP, Odoo Community Association (OCA), TMC Rosario",
     "license": "AGPL-3",
     "category": "base",
     "depends": ["web"],
-    "data": ["data/ir_ui_menu.xml"],
+    "data": ["data/ir_ui_menu.xml", "views/login_templates.xml"],
     "assets": {
         "web.assets_backend": [
             "remove_odoo_bindings/static/src/js/user_menu.js",
