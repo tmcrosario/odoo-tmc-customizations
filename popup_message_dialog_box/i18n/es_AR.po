@@ -65,3 +65,13 @@ msgstr "Aceptar"
 #: model:ir.model,name:popup_message_dialog_box.model_popup_message
 msgid "Popup Message"
 msgstr "Mensaje"
+
+#. module: popup_message_dialog_box
+#: model:ir.model.fields,field_description:popup_message_dialog_box.field_popup_message__html_message
+msgid "HTML Message"
+msgstr "Mensaje HTML"
+
+#. module: popup_message_dialog_box
+#: model:ir.model.fields,field_description:popup_message_dialog_box.field_popup_message__plain_text_message
+msgid "Plain Text Message"
+msgstr "Mensaje de texto plano"

@@ -14,11 +14,11 @@ class PopupMessage(models.TransientModel):
         return self.env.context.get("is_html", False)
 
     plain_text_message = fields.Text(
-        string="Message", readonly=True, default=_default_message
+        string="Plain Text Message", readonly=True, default=_default_message
     )
 
     html_message = fields.Html(
-        string="Message", readonly=True, default=_default_message
+        string="HTML Message", readonly=True, default=_default_message
     )
 
     is_html = fields.Boolean(readonly=True, default=_default_is_html)
