@@ -1,4 +1,4 @@
-# Claude Instructions for `odoo-tmc-customizations`
+# Agent conventions for `odoo-tmc-customizations`
 
 TMC Odoo 19.0 addon repository.
 
