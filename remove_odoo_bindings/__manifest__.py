@@ -12,7 +12,7 @@
     "data": ["data/ir_ui_menu.xml", "views/login_templates.xml"],
     "assets": {
         "web.assets_backend": [
-            "remove_odoo_bindings/static/src/js/user_menu.js",
+            "remove_odoo_bindings/static/src/js/user_menu.esm.js",
         ],
     },
     "installable": True,

@@ -1,6 +1,6 @@
-import {registry} from "@web/core/registry";
 // Explicit edge: load the core items module first so its registrations exist
 import "@web/webclient/user_menu/user_menu_items";
+import {registry} from "@web/core/registry";
 
 // 19.0: the user menu is built from the "user_menuitems" registry, not from the
 // pre-OWL `UserMenu.Actions` template that the old `t-extend` / `t-jquery`

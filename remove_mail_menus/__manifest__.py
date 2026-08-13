@@ -8,7 +8,7 @@
     "data": ["data/ir_ui_menu.xml"],
     "assets": {
         "web.assets_backend": [
-            "remove_mail_menus/static/src/js/remove_mail_menus.js",
+            "remove_mail_menus/static/src/js/remove_mail_menus.esm.js",
             "remove_mail_menus/static/src/scss/remove_mail_menus.scss",
         ],
     },

@@ -1,6 +1,6 @@
 import {registry} from "@web/core/registry";
 
-// mail contributes four entries to the top bar. This module depends on mail, so
+// Mail contributes four entries to the top bar. This module depends on mail, so
 // its assets load afterwards and these removals win.
 //
 // The pre-OWL `<t t-extend>` / `t-jquery` template used until 14.0 no longer has
