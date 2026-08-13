@@ -1,4 +1,4 @@
-import { registry } from "@web/core/registry";
+import {registry} from "@web/core/registry";
 
 // mail contributes four entries to the top bar. This module depends on mail, so
 // its assets load afterwards and these removals win.

@@ -64,7 +64,7 @@ class TestDbBackup(common.TransactionCase):
         for dump in dumps:
             self.assertTrue(
                 os.path.getsize(dump),
-                "%s is empty" % os.path.basename(dump),
+                f"{os.path.basename(dump)} is empty",
             )
 
     def test_shared_folder_keeps_the_dump(self):
@@ -89,11 +89,9 @@ class TestDbBackup(common.TransactionCase):
         # Shared folder: the hourly cleanup (keep 1 day) must not delete the
         # daily/monthly dumps, which carry their own longer retention
         dbname = self.env.cr.dbname
-        old_daily = os.path.join(
-            self.folder, "2000_01_01_00_00_00_%s_daily.zip" % dbname
-        )
+        old_daily = os.path.join(self.folder, f"2000_01_01_00_00_00_{dbname}_daily.zip")
         old_monthly = os.path.join(
-            self.folder, "2000_01_01_00_00_00_%s_monthly.zip" % dbname
+            self.folder, f"2000_01_01_00_00_00_{dbname}_monthly.zip"
         )
         for path in (old_daily, old_monthly):
             with open(path, "wb") as handle:

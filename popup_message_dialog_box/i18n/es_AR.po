@@ -51,12 +51,6 @@ msgid "Last Updated on"
 msgstr "Última actualización el"
 
 #. module: popup_message_dialog_box
-#: model:ir.model.fields,field_description:popup_message_dialog_box.field_popup_message__html_message
-#: model:ir.model.fields,field_description:popup_message_dialog_box.field_popup_message__plain_text_message
-msgid "Message"
-msgstr "Mensaje"
-
-#. module: popup_message_dialog_box
 #: model_terms:ir.ui.view,arch_db:popup_message_dialog_box.popup_message_view_form
 msgid "Ok"
 msgstr "Aceptar"

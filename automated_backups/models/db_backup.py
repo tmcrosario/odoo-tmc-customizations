@@ -11,7 +11,7 @@ from contextlib import contextmanager
 from datetime import datetime, timedelta
 from glob import iglob
 
-from odoo import _, api, exceptions, fields, models, tools
+from odoo import api, exceptions, fields, models, tools
 from odoo.service import db
 
 _LOGGER = logging.getLogger(__name__)
@@ -33,7 +33,7 @@ class DbBackup(models.Model):
 
     name = fields.Char(required=True)
 
-    folder = fields.Char(default=_default_folder, required=True)
+    folder = fields.Char(default=lambda self: self._default_folder(), required=True)
 
     days_to_keep = fields.Integer(
         default=0,
@@ -48,7 +48,7 @@ class DbBackup(models.Model):
         for rec in self:
             if rec.folder.startswith(tools.config.filestore(self.env.cr.dbname)):
                 raise exceptions.ValidationError(
-                    _(
+                    self.env._(
                         "Do not save backups on your filestore, or you will "
                         "backup your backups too!"
                     )
@@ -105,7 +105,7 @@ class DbBackup(models.Model):
         elif interval == "months":
             return self.search([("recurrence", "=", "monthly")]).action_backup()
         else:
-            raise exceptions.ValidationError(_("Wrong backup interval"))
+            raise exceptions.ValidationError(self.env._("Wrong backup interval"))
 
     @contextmanager
     def backup_log(self):
@@ -124,7 +124,7 @@ class DbBackup(models.Model):
                 # Prune only this recurrence; a shared folder keeps the
                 # other recurrences' longer-lived dumps
                 oldest = rec.filename(now - timedelta(days=rec.days_to_keep))
-                pattern = os.path.join(rec.folder, "*_%s.zip" % rec.recurrence)
+                pattern = os.path.join(rec.folder, f"*_{rec.recurrence}.zip")
                 for name in iglob(pattern):
                     if os.path.basename(name) < oldest:
                         os.unlink(name)

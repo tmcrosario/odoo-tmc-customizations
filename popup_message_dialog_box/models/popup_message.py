@@ -1,7 +1,8 @@
 from odoo import fields, models
 
 
-class PopupMessage(models.TransientModel):
+# Kept in models/ to avoid a risky directory move mid-migration
+class PopupMessage(models.TransientModel):  # pylint: disable=no-wizard-in-models
     _name = "popup.message"
     _description = "Popup Message"
 
@@ -14,11 +15,15 @@ class PopupMessage(models.TransientModel):
         return self.env.context.get("is_html", False)
 
     plain_text_message = fields.Text(
-        string="Plain Text Message", readonly=True, default=_default_message
+        readonly=True, default=lambda self: self._default_message()
     )
 
     html_message = fields.Html(
-        string="HTML Message", readonly=True, default=_default_message
+        string="HTML Message",
+        readonly=True,
+        default=lambda self: self._default_message(),
     )
 
-    is_html = fields.Boolean(readonly=True, default=_default_is_html)
+    is_html = fields.Boolean(
+        readonly=True, default=lambda self: self._default_is_html()
+    )
