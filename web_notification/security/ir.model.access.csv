@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_web_notification_user,web.notification.user,model_web_notification,base.group_user,1,0,0,0
+access_web_notification_origin_user,web.notification.origin.user,model_web_notification_origin,base.group_user,1,0,0,0
+access_web_notification_origin_system,web.notification.origin.system,model_web_notification_origin,base.group_system,1,1,1,1
+access_web_notification_kind_user,web.notification.kind.user,model_web_notification_kind,base.group_user,1,0,0,0
+access_web_notification_kind_system,web.notification.kind.system,model_web_notification_kind,base.group_system,1,1,1,1
+access_tmc_system_notif_read,tmc.system.notif.read,tmc.model_tmc_system,base.group_user,1,0,0,0
+access_tmc_system_notif_write,tmc.system.notif.write,tmc.model_tmc_system,base.group_system,1,1,1,0
+access_web_notification_snooze_user,web.notification.snooze.user,model_web_notification_snooze_wizard,base.group_user,1,1,1,1

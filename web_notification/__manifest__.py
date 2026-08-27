@@ -1,0 +1,30 @@
+{
+    "name": "In-App Notifications",
+    "version": "19.0.1.0.0",
+    "summary": "Self-contained in-app notification inbox with a systray bell",
+    "author": "Tribunal Municipal de Cuentas - Municipalidad de Rosario",
+    "website": "https://www.tmcrosario.gob.ar",
+    "license": "AGPL-3",
+    "category": "Technical",
+    "depends": ["web", "tmc"],
+    "data": [
+        "security/notification_security.xml",
+        "security/ir.model.access.csv",
+        "data/notification_kind_data.xml",
+        "data/notification_cron.xml",
+        "views/notification_config_views.xml",
+        "views/notification_views.xml",
+        "views/notification_menu.xml",
+        "wizards/notification_snooze_wizard_views.xml",
+    ],
+    "assets": {
+        "web.assets_backend": [
+            "web_notification/static/src/notification_systray/notification_systray.xml",
+            "web_notification/static/src/notification_systray/notification_systray.esm.js",
+            "web_notification/static/src/notification_systray/notification_systray.scss",
+            "web_notification/static/src/notification_list/notification_list.esm.js",
+        ],
+    },
+    "installable": True,
+    "application": False,
+}

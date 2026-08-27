@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="web_notification.NotificationBell">
+        <button
+            t-if="state.visible"
+            class="o_web_notification_bell"
+            t-att-title="title"
+            t-att-aria-label="title"
+            t-on-click="onClick"
+        >
+            <i class="fa fa-bell" role="img" />
+            <span
+                t-if="state.count &gt; 0"
+                class="badge rounded-pill"
+                t-esc="state.count"
+            />
+        </button>
+    </t>
+</templates>

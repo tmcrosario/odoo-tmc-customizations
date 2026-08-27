@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Retention window (days); admins may change it, so keep it noupdate. -->
+    <data noupdate="1">
+        <record id="ir_config_parameter_retention_days" model="ir.config_parameter">
+            <field name="key">web_notification.retention_days</field>
+            <field name="value">365</field>
+        </record>
+    </data>
+
+    <data>
+        <record id="ir_cron_purge_resolved" model="ir.cron">
+            <field name="name">Notifications: purge resolved</field>
+            <field name="user_id" ref="base.user_root" />
+            <field name="model_id" ref="model_web_notification" />
+            <field name="state">code</field>
+            <field name="code">model._cron_purge_resolved()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">weeks</field>
+            <field
+                name="nextcall"
+                eval="(datetime.now() + timedelta(days=7)).strftime('%Y-%m-%d 03:00:00')"
+            />
+            <field name="active" eval="True" />
+        </record>
+    </data>
+</odoo>

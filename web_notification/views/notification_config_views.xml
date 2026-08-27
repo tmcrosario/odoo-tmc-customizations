@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="web_notification_system_view_list" model="ir.ui.view">
+        <field name="name">web.notification.system.list</field>
+        <field name="model">tmc.system</field>
+        <field name="arch" type="xml">
+            <list string="Systems" delete="false">
+                <field name="name" />
+                <field name="app_menu_id" />
+                <field name="color" widget="color_picker" />
+            </list>
+        </field>
+    </record>
+
+    <record id="web_notification_system_view_form" model="ir.ui.view">
+        <field name="name">web.notification.system.form</field>
+        <field name="model">tmc.system</field>
+        <field name="arch" type="xml">
+            <form string="System">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="app_menu_id" />
+                        <field name="color" widget="color_picker" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_web_notification_system" model="ir.actions.act_window">
+        <field name="name">Systems</field>
+        <field name="res_model">tmc.system</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="web_notification_system_view_list" />
+    </record>
+
+    <record id="web_notification_kind_view_list" model="ir.ui.view">
+        <field name="name">web.notification.kind.list</field>
+        <field name="model">web.notification.kind</field>
+        <field name="arch" type="xml">
+            <list string="Types">
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="code" />
+                <field name="system_id" />
+            </list>
+        </field>
+    </record>
+
+    <record id="web_notification_kind_view_form" model="ir.ui.view">
+        <field name="name">web.notification.kind.form</field>
+        <field name="model">web.notification.kind</field>
+        <field name="arch" type="xml">
+            <form string="Type">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="code" />
+                        <field name="system_id" />
+                        <field name="sequence" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_web_notification_kind" model="ir.actions.act_window">
+        <field name="name">Types</field>
+        <field name="res_model">web.notification.kind</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

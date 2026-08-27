@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="web_notification_view_search" model="ir.ui.view">
+        <field name="name">web.notification.search</field>
+        <field name="model">web.notification</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="kind_id" />
+                <field name="system_id" />
+                <field name="res_model" string="Origin Model" />
+                <field name="date_deadline" options="{'numeric': True}" />
+                <filter
+                    name="overdue"
+                    string="Overdue"
+                    domain="[('date_deadline', '!=', False), ('date_deadline', '&lt;', context_today().strftime('%Y-%m-%d'))]"
+                />
+                <filter
+                    name="today"
+                    string="Today"
+                    domain="[('date_deadline', '=', context_today().strftime('%Y-%m-%d'))]"
+                />
+                <filter
+                    name="overdue_or_today"
+                    string="Overdue or Today"
+                    domain="[('date_deadline', '!=', False), ('date_deadline', '&lt;=', context_today().strftime('%Y-%m-%d'))]"
+                />
+                <filter
+                    name="upcoming"
+                    string="Upcoming"
+                    domain="[('date_deadline', '&gt;', context_today().strftime('%Y-%m-%d'))]"
+                />
+                <separator />
+                <filter
+                    name="group_system"
+                    string="System"
+                    context="{'group_by': 'system_id'}"
+                />
+                <filter
+                    name="group_kind"
+                    string="Type"
+                    context="{'group_by': 'kind_id'}"
+                />
+            </search>
+        </field>
+    </record>
+
+    <record id="web_notification_view_list" model="ir.ui.view">
+        <field name="name">web.notification.list</field>
+        <field name="model">web.notification</field>
+        <field name="arch" type="xml">
+            <list
+                string="Notifications"
+                create="false"
+                edit="false"
+                delete="false"
+                expand="1"
+                js_class="web_notification_list"
+            >
+                <field name="state" column_invisible="1" />
+                <field name="system_color" column_invisible="1" />
+                <field
+                    name="system_id"
+                    widget="selection_badge"
+                    options="{'color_field': 'system_color'}"
+                />
+                <field name="name" />
+                <field name="kind_id" />
+                <field name="origin" options="{'no_open': True}" />
+                <field name="date_deadline" widget="remaining_days" />
+                <button
+                    name="action_mark_seen"
+                    type="object"
+                    string="Seen"
+                    icon="fa-check"
+                    invisible="state != 'pending'"
+                />
+                <button
+                    name="action_open_snooze_wizard"
+                    type="object"
+                    string="Snooze"
+                    icon="fa-clock-o"
+                    invisible="state != 'pending'"
+                />
+                <button
+                    name="action_open_origin"
+                    type="object"
+                    string="Open"
+                    icon="fa-external-link"
+                />
+            </list>
+        </field>
+    </record>
+
+    <record id="web_notification_view_list_snoozed" model="ir.ui.view">
+        <field name="name">web.notification.list.snoozed</field>
+        <field name="model">web.notification</field>
+        <field name="arch" type="xml">
+            <list
+                string="Snoozed Notifications"
+                create="false"
+                edit="false"
+                delete="false"
+                expand="1"
+                js_class="web_notification_list"
+            >
+                <field name="state" column_invisible="1" />
+                <field name="system_color" column_invisible="1" />
+                <field
+                    name="system_id"
+                    widget="selection_badge"
+                    options="{'color_field': 'system_color'}"
+                />
+                <field name="name" />
+                <field name="kind_id" />
+                <field name="origin" options="{'no_open': True}" />
+                <field name="date_deadline" widget="remaining_days" />
+                <field name="snooze_until" options="{'numeric': True}" />
+                <button
+                    name="action_mark_seen"
+                    type="object"
+                    string="Seen"
+                    icon="fa-check"
+                    invisible="state != 'pending'"
+                />
+                <button
+                    name="action_reactivate"
+                    type="object"
+                    string="Reactivate"
+                    icon="fa-undo"
+                />
+                <button
+                    name="action_open_origin"
+                    type="object"
+                    string="Open"
+                    icon="fa-external-link"
+                />
+            </list>
+        </field>
+    </record>
+
+    <record id="web_notification_view_list_seen" model="ir.ui.view">
+        <field name="name">web.notification.list.seen</field>
+        <field name="model">web.notification</field>
+        <field name="arch" type="xml">
+            <list
+                string="Seen Notifications"
+                create="false"
+                edit="false"
+                delete="false"
+                default_order="done_at desc"
+                expand="1"
+                js_class="web_notification_list"
+            >
+                <field name="system_color" column_invisible="1" />
+                <field
+                    name="system_id"
+                    widget="selection_badge"
+                    options="{'color_field': 'system_color'}"
+                />
+                <field name="name" />
+                <field name="kind_id" />
+                <field name="origin" options="{'no_open': True}" />
+                <field name="done_at" options="{'numeric': True}" />
+                <button
+                    name="action_reactivate"
+                    type="object"
+                    string="Reactivate"
+                    icon="fa-undo"
+                />
+                <button
+                    name="action_open_origin"
+                    type="object"
+                    string="Open"
+                    icon="fa-external-link"
+                />
+            </list>
+        </field>
+    </record>
+
+    <record id="web_notification_view_list_scoped" model="ir.ui.view">
+        <field name="name">web.notification.list.scoped</field>
+        <field name="model">web.notification</field>
+        <field name="arch" type="xml">
+            <list
+                string="Notifications"
+                create="false"
+                edit="false"
+                delete="false"
+                js_class="web_notification_list"
+            >
+                <field name="state" column_invisible="1" />
+                <field name="name" />
+                <field name="kind_id" />
+                <field name="origin" options="{'no_open': True}" />
+                <field name="date_deadline" widget="remaining_days" />
+                <button
+                    name="action_mark_seen"
+                    type="object"
+                    string="Seen"
+                    icon="fa-check"
+                    invisible="state != 'pending'"
+                />
+                <button
+                    name="action_open_snooze_wizard"
+                    type="object"
+                    string="Snooze"
+                    icon="fa-clock-o"
+                    invisible="state != 'pending'"
+                />
+                <button
+                    name="action_open_origin"
+                    type="object"
+                    string="Open"
+                    icon="fa-external-link"
+                />
+            </list>
+        </field>
+    </record>
+
+    <record id="action_web_notification_active" model="ir.actions.act_window">
+        <field name="name">Active</field>
+        <field name="res_model">web.notification</field>
+        <field name="view_mode">list</field>
+        <field name="view_id" ref="web_notification_view_list" />
+        <field
+            name="domain"
+        >[('state', '=', 'pending'), '|', ('snooze_until', '=', False), ('snooze_until', '&lt;=', context_today().strftime('%Y-%m-%d'))]</field>
+        <field name="context">{'search_default_group_system': 1}</field>
+        <field name="help" type="html">
+            <p
+                class="o_view_nocontent_smiling_face"
+            >You have no active notifications.</p>
+        </field>
+    </record>
+
+    <record id="action_web_notification_snoozed" model="ir.actions.act_window">
+        <field name="name">Snoozed</field>
+        <field name="res_model">web.notification</field>
+        <field name="view_mode">list</field>
+        <field name="view_id" ref="web_notification_view_list_snoozed" />
+        <field
+            name="domain"
+        >[('state', '=', 'pending'), ('snooze_until', '&gt;', context_today().strftime('%Y-%m-%d'))]</field>
+        <field name="context">{'search_default_group_system': 1}</field>
+    </record>
+
+    <record id="action_web_notification_seen" model="ir.actions.act_window">
+        <field name="name">Seen</field>
+        <field name="res_model">web.notification</field>
+        <field name="view_mode">list</field>
+        <field name="view_id" ref="web_notification_view_list_seen" />
+        <field name="domain">[('state', '=', 'done')]</field>
+        <field name="context">{'search_default_group_system': 1}</field>
+    </record>
+</odoo>

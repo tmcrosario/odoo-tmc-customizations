@@ -1,0 +1,7 @@
+// Match the native systray entries (padding, height, flex-centering, hover).
+.o_web_notification_bell {
+    @extend %-main-navbar-entry-base;
+    @extend %-main-navbar-entry-spacing;
+    border: 0;
+    cursor: pointer;
+}

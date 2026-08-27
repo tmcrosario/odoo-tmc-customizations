@@ -1,0 +1,399 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* web_notification
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20260803\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-26 15:45+0000\n"
+"PO-Revision-Date: 2026-08-26 15:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: web_notification
+#: model:ir.actions.act_window,name:web_notification.action_web_notification_active
+#: model:ir.ui.menu,name:web_notification.web_notification_menu_active
+msgid "Active"
+msgstr "Activas"
+
+#. module: web_notification
+#: model:ir.model,name:web_notification.model_web_notification_origin
+msgid "Allowed Notification Origin Model"
+msgstr "Modelo de origen de notificación permitido"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_tmc_system__app_menu_id
+msgid "App Menu"
+msgstr "Menú de app"
+
+#. module: web_notification
+#: model:web.notification.kind,name:web_notification.notification_kind_assignment
+msgid "Assigned"
+msgstr "Asignada"
+
+#. module: web_notification
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_snooze_wizard_view_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_kind__code
+msgid "Code"
+msgstr "Código"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__system_color
+msgid "Color"
+msgstr "Color"
+
+#. module: web_notification
+#: model:ir.ui.menu,name:web_notification.web_notification_menu_config
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__create_uid
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_kind__create_uid
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_origin__create_uid
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_snooze_wizard__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__create_date
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_kind__create_date
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_origin__create_date
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_snooze_wizard__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__date_deadline
+msgid "Date Deadline"
+msgstr "Fecha límite"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_tmc_system__display_name
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__display_name
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_kind__display_name
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_origin__display_name
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_snooze_wizard__display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: web_notification
+#: model:ir.model.fields.selection,name:web_notification.selection__web_notification__state__done
+msgid "Done"
+msgstr "Visto"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__done_at
+msgid "Done At"
+msgstr "Visto el"
+
+#. module: web_notification
+#: model:web.notification.kind,name:web_notification.notification_kind_deadline
+msgid "Due soon"
+msgstr "Próxima a Vencer"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__event_key
+msgid "Event Key"
+msgstr "Clave de evento"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_tmc_system__id
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__id
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_kind__id
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_origin__id
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_snooze_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: web_notification
+#: model:ir.model,name:web_notification.model_web_notification
+msgid "In-App Notification"
+msgstr "Notificación in-app"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__write_uid
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_kind__write_uid
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_origin__write_uid
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_snooze_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__write_date
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_kind__write_date
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_origin__write_date
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_snooze_wizard__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_origin__res_model
+msgid "Model Name"
+msgstr "Nombre del modelo"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_kind__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__note
+msgid "Note"
+msgstr "Nota"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_snooze_wizard__notification_id
+msgid "Notification"
+msgstr "Notificación"
+
+#. module: web_notification
+#: model:ir.model,name:web_notification.model_web_notification_kind
+msgid "Notification Kind"
+msgstr "Tipo de notificación"
+
+#. module: web_notification
+#. odoo-javascript
+#: code:addons/web_notification/static/src/notification_systray/notification_systray.esm.js:0
+#: model:ir.ui.menu,name:web_notification.web_notification_menu_root
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_list
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_list_scoped
+msgid "Notifications"
+msgstr "Notificaciones"
+
+#. module: web_notification
+#: model:ir.actions.server,name:web_notification.ir_cron_purge_resolved_ir_actions_server
+msgid "Notifications: purge resolved"
+msgstr "Notificaciones: purgar resueltas"
+
+#. module: web_notification
+#. odoo-python
+#: code:addons/web_notification/models/notification.py:0
+msgid "Only pending notifications can be snoozed."
+msgstr "Solo se pueden posponer notificaciones pendientes."
+
+#. module: web_notification
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_list
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_list_scoped
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_list_seen
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_list_snoozed
+msgid "Open"
+msgstr "Abrir"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__origin
+msgid "Origin"
+msgstr "Origen"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_origin__model_id
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_search
+msgid "Origin Model"
+msgstr "Modelo de origen"
+
+#. module: web_notification
+#: model:web.notification.kind,name:web_notification.notification_kind_overdue
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_search
+msgid "Overdue"
+msgstr "Vencida"
+
+#. module: web_notification
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_search
+msgid "Overdue or Today"
+msgstr "Vencida o de hoy"
+
+#. module: web_notification
+#: model:ir.model.fields.selection,name:web_notification.selection__web_notification__state__pending
+msgid "Pending"
+msgstr "Pendiente"
+
+#. module: web_notification
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_list_seen
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_list_snoozed
+msgid "Reactivate"
+msgstr "Reactivar"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__user_id
+msgid "Recipient"
+msgstr "Destinatario"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__res_id
+msgid "Res"
+msgstr ""
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__res_model
+msgid "Res Model"
+msgstr "Modelo Res"
+
+#. module: web_notification
+#: model:ir.actions.act_window,name:web_notification.action_web_notification_seen
+#: model:ir.ui.menu,name:web_notification.web_notification_menu_seen
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_list
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_list_scoped
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_list_snoozed
+msgid "Seen"
+msgstr "Visto"
+
+#. module: web_notification
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_list_seen
+msgid "Seen Notifications"
+msgstr "Notificaciones vistas"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_kind__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: web_notification
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_snooze_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_list
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_list_scoped
+msgid "Snooze"
+msgstr "Posponer"
+
+#. module: web_notification
+#: model:ir.model,name:web_notification.model_web_notification_snooze_wizard
+msgid "Snooze Notification Wizard"
+msgstr "Asistente para posponer notificación"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__snooze_until
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_snooze_wizard__snooze_until
+msgid "Snooze Until"
+msgstr "Posponer hasta"
+
+#. module: web_notification
+#. odoo-python
+#: code:addons/web_notification/models/notification.py:0
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_snooze_wizard_view_form
+msgid "Snooze notification"
+msgstr "Posponer notificación"
+
+#. module: web_notification
+#: model:ir.actions.act_window,name:web_notification.action_web_notification_snoozed
+#: model:ir.ui.menu,name:web_notification.web_notification_menu_snoozed
+msgid "Snoozed"
+msgstr "Pospuestas"
+
+#. module: web_notification
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_list_snoozed
+msgid "Snoozed Notifications"
+msgstr "Notificaciones pospuestas"
+
+#. module: web_notification
+#: model:ir.model.fields,help:web_notification.field_web_notification_kind__code
+msgid "Stable technical identity used by producers; not translated."
+msgstr "Identidad técnica estable usada por los productores; no se traduce."
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__state
+msgid "State"
+msgstr "Estado"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__name
+msgid "Summary"
+msgstr "Resumen"
+
+#. module: web_notification
+#: model:ir.model,name:web_notification.model_tmc_system
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__system_id
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_kind__system_id
+#: model:ir.model.fields,field_description:web_notification.field_web_notification_origin__system_id
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_system_view_form
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_search
+msgid "System"
+msgstr "Sistema"
+
+#. module: web_notification
+#: model:ir.actions.act_window,name:web_notification.action_web_notification_system
+#: model:ir.ui.menu,name:web_notification.web_notification_menu_config_system
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_system_view_list
+msgid "Systems"
+msgstr "Sistemas"
+
+#. module: web_notification
+#. odoo-python
+#: code:addons/web_notification/models/notification.py:0
+msgid "The linked record is no longer available."
+msgstr "El registro vinculado ya no está disponible."
+
+#. module: web_notification
+#: model:ir.model.constraint,message:web_notification.constraint_web_notification_kind_code_uniq
+msgid "The notification kind code must be unique."
+msgstr "El código del tipo de notificación debe ser único."
+
+#. module: web_notification
+#. odoo-python
+#: code:addons/web_notification/models/notification.py:0
+msgid "The snooze date must be in the future."
+msgstr "La fecha para posponer debe ser futura."
+
+#. module: web_notification
+#. odoo-python
+#: code:addons/web_notification/models/notification.py:0
+msgid "There is already an active notification for this event."
+msgstr "Ya existe una notificación activa para este evento."
+
+#. module: web_notification
+#: model:ir.model.constraint,message:web_notification.constraint_tmc_system_app_menu_uniq
+msgid "This app is already mapped to a system."
+msgstr "Esta app ya está mapeada a un sistema."
+
+#. module: web_notification
+#: model:ir.model.constraint,message:web_notification.constraint_web_notification_origin_model_uniq
+msgid "This origin model is already registered."
+msgstr "Este modelo de origen ya está registrado."
+
+#. module: web_notification
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_search
+msgid "Today"
+msgstr "Hoy"
+
+#. module: web_notification
+#: model:ir.model.fields,field_description:web_notification.field_web_notification__kind_id
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_kind_view_form
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_search
+msgid "Type"
+msgstr "Tipo"
+
+#. module: web_notification
+#: model:ir.actions.act_window,name:web_notification.action_web_notification_kind
+#: model:ir.ui.menu,name:web_notification.web_notification_menu_config_kind
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_kind_view_list
+msgid "Types"
+msgstr "Tipos"
+
+#. module: web_notification
+#: model_terms:ir.ui.view,arch_db:web_notification.web_notification_view_search
+msgid "Upcoming"
+msgstr "Próximas"
+
+#. module: web_notification
+#. odoo-python
+#: code:addons/web_notification/models/notification.py:0
+msgid "You are not allowed to open the linked record."
+msgstr "No tenés permiso para abrir el registro vinculado."
+
+#. module: web_notification
+#. odoo-python
+#: code:addons/web_notification/models/notification.py:0
+msgid "You cannot act on notifications addressed to another user."
+msgstr "No podés operar sobre notificaciones dirigidas a otro usuario."
+
+#. module: web_notification
+#: model_terms:ir.actions.act_window,help:web_notification.action_web_notification_active
+msgid "You have no active notifications."
+msgstr "No tenés notificaciones activas."
