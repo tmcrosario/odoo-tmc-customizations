@@ -1,24 +1,27 @@
 # Odoo TMC Customizations
 
- Extra modules for use alongside with TMC addons.
+![Odoo 19.0](https://img.shields.io/badge/Odoo-19.0-714B67)
+[![Licencia: AGPL-3](https://img.shields.io/badge/licencia-AGPL--3-blue.svg)](LICENSE)
 
-## Available addons
+Módulos complementarios de los addons del TMC.
 
-addon | version | summary
---- | --- | ---
-[remove_mail_menus](remove_mail_menus/) | 14.0.1.0.0 | Hide Activities, Conversation and Discuss menus from 'mail' addon
-[automated_backups](automated_backups/) | 14.0.1.0.0 | Simplified version of 'auto_backup' addon
-[popup_message_dialog_box](popup_message_dialog_box/) | 14.0.1.0.0 | Popup message dialog box addon
-[remove_odoo_bindings](remove_odoo_bindings/) | 14.0.1.0.0 | Deactivates all bindings to odoo.com that come with the standard code
+## Módulos
 
-## License
+| Módulo                                                  | Versión    | Descripción                                                                 |
+| ------------------------------------------------------- | ---------- | --------------------------------------------------------------------------- |
+| [`automated_backups`](automated_backups/)               | 19.0.1.0.0 | Copias de seguridad automáticas (versión simplificada de `auto_backup`)     |
+| [`popup_message_dialog_box`](popup_message_dialog_box/) | 19.0.1.0.1 | Diálogo emergente de mensajes                                               |
+| [`remove_mail_menus`](remove_mail_menus/)               | 19.0.1.0.0 | Oculta los menús de Actividades, Conversaciones y Discuss del módulo `mail` |
+| [`remove_odoo_bindings`](remove_odoo_bindings/)         | 19.0.1.1.0 | Desactiva los vínculos con odoo.com del código estándar                     |
+| [`web_classic_form_buttons`](web_classic_form_buttons/) | 19.0.1.0.0 | Botones Guardar/Descartar con etiqueta en el formulario                     |
+| [`web_notification`](web_notification/)                 | 19.0.1.0.0 | Bandeja de notificaciones internas con campana en la barra superior         |
 
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+## Instalación
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+Dependencia de `web_notification`: [`odoo-tmc`](https://github.com/tmcrosario/odoo-tmc).
 
-You should have received a copy of the GNU Affero General Public License along with this program. If not, see http://www.gnu.org/licenses/.
+Agregar a la ruta de addons, actualizar aplicaciones e instalar los módulos necesarios.
 
-----
+## Licencia
 
-<img align="left" src="https://iili.io/2ARo1R.png"/>
+[AGPL-3](LICENSE). Autores: ver el `__manifest__.py` de cada módulo.
