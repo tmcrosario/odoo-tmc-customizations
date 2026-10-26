@@ -10,7 +10,6 @@ Módulos complementarios de los addons del TMC.
 | Módulo                                                  | Versión    | Descripción                                                                 |
 | ------------------------------------------------------- | ---------- | --------------------------------------------------------------------------- |
 | [`automated_backups`](automated_backups/)               | 19.0.1.0.0 | Copias de seguridad automáticas (versión simplificada de `auto_backup`)     |
-| [`popup_message_dialog_box`](popup_message_dialog_box/) | 19.0.1.0.1 | Diálogo emergente de mensajes                                               |
 | [`remove_mail_menus`](remove_mail_menus/)               | 19.0.1.0.0 | Oculta los menús de Actividades, Conversaciones y Discuss del módulo `mail` |
 | [`remove_odoo_bindings`](remove_odoo_bindings/)         | 19.0.1.1.0 | Desactiva los vínculos con odoo.com del código estándar                     |
 | [`web_classic_form_buttons`](web_classic_form_buttons/) | 19.0.1.0.0 | Botones Guardar/Descartar con etiqueta en el formulario                     |
